@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { BsSearch } from 'react-icons/bs'; // Ensure this import is included
 
 const Navbar = () => {
-  const user = true; // This should ideally come from authentication state
+  const user = false; // This should ideally come from authentication state
 
   return (
     <div className="flex items-center justify-between px-6 md:px-[200px] py-4">
