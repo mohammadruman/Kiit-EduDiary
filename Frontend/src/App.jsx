@@ -1,8 +1,24 @@
 
+import {Route, Routes} from 'react-router-dom'
+import Home from "./pages/Home"
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+
+
+
 
 const App = () => {
+
+
+  
   return (
-    <div>App</div>
+     <div>
+        <Navbar/>
+      <Routes>
+      <Route exact path="/" element={<Home/>}/>
+      </Routes>
+    <Footer/>
+    </div>
   )
 }
 
