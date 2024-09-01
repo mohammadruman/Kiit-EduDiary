@@ -1,7 +1,7 @@
 
 const Homepost = () => {
   return (
-    <div className="w-full flex mt-8 space-x-4">
+    <div className="w-full flex mt-8 space-x-4 ">
         {/* Left*/ }
         <div className="w-[35%] h-[200px] flex justify-center items-center">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbnTZs4YLKIt3eAelwShiBMkZtyWELWzlDg&usqp=CAU" alt="" className="h-full w-full object-cover"/>
