@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link} from "react-router-dom"
 import Footer from "../components/Footer"
 
 const Login = () => {
@@ -21,9 +21,11 @@ const Login = () => {
           <p className="text-gray-500 hover:text-black"><Link to="/register">Register</Link></p>
          </div>
        </div>
+       
     </div>
-  
+    <Footer/>
     </>
+    
     
   )
 }

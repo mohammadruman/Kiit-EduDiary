@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { BsSearch } from 'react-icons/bs'; // Ensure this import is included
+import Footer from './Footer';
 
 const Navbar = () => {
   const user = false; // This should ideally come from authentication state
@@ -30,6 +31,7 @@ const Navbar = () => {
           </>
         )}
       </div>
+    
     </div>
   );
 };
