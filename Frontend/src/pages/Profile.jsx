@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react"
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
-import ProfilePosts from "../components/ProfilePosts"
+import ProfilePosts from "../components/ProfilePost"
 import axios from "axios"
-import { IF, URL } from "../url"
+import { IF, URL } from "../pages/url"
 import { UserContext } from "../context/UserContext"
 import { useNavigate, useParams } from "react-router-dom"
 

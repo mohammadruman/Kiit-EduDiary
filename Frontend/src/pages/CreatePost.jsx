@@ -1,15 +1,18 @@
-
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import {ImCross} from 'react-icons/im'
 import { useContext, useState } from 'react'
-
+import { UserContext } from '../context/UserContext'
+import { URL } from '../pages/url'
 import axios from 'axios'
 import { Navigate, useNavigate } from 'react-router-dom'
 
 const CreatePost = () => {
    
-  
+    const [title,setTitle]=useState("")
+    const [desc,setDesc]=useState("")
+    const [file,setFile]=useState(null)
+    const {user}=useContext(UserContext)
     const [cat,setCat]=useState("")
     const [cats,setCats]=useState([])
 
@@ -67,7 +70,7 @@ const CreatePost = () => {
         }
     }
 
-
+    
 
   return (
     <div>

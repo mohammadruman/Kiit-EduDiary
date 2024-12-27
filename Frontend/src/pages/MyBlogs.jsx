@@ -1,17 +1,16 @@
-import axios from "axios"
-import Footer from "../components/Footer"
-import HomePosts from "../components/Homepost"
-import Navbar from "../components/Navbar"
-import { IF, URL } from "../pages/url"
-import { useContext, useEffect, useState } from "react"
 import { Link, useLocation } from "react-router-dom"
-import Loader from '../components/Loader'
+import Footer from "../components/Footer"
+import Navbar from "../components/Navbar"
+import { useContext, useEffect, useState } from "react"
 import { UserContext } from "../context/UserContext"
- 
+import axios from "axios"
+import { URL } from "./url"
+import HomePosts from "../components/HomePost"
+import Loader from "../components/Loader"
 
-const Home = () => {
-  
-  const {search}=useLocation()
+
+const MyBlogs = () => {
+    const {search}=useLocation()
   // console.log(search)
   const [posts,setPosts]=useState([])
   const [noResults,setNoResults]=useState(false)
@@ -22,7 +21,7 @@ const Home = () => {
   const fetchPosts=async()=>{
     setLoader(true)
     try{
-      const res=await axios.get(URL+"/api/posts/"+search)
+      const res=await axios.get(URL+"/api/posts/user/"+user._id)
       // console.log(res.data)
       setPosts(res.data)
       if(res.data.length===0){
@@ -45,13 +44,10 @@ const Home = () => {
 
   },[search])
 
-
-
   return (
-    
-    <>
-    <Navbar/>
-<div className="px-8 md:px-[200px] min-h-[80vh]">
+    <div>
+        <Navbar/>
+        <div className="px-8 md:px-[200px] min-h-[80vh]">
         {loader?<div className="h-[40vh] flex justify-center items-center"><Loader/></div>:!noResults?
         posts.map((post)=>(
           <>
@@ -61,11 +57,10 @@ const Home = () => {
           </>
           
         )):<h3 className="text-center font-bold mt-16">No posts available</h3>}
+        </div>
+        <Footer/>
     </div>
-    <Footer/>
-    </>
-    
   )
 }
 
-export default Home
+export default MyBlogs
