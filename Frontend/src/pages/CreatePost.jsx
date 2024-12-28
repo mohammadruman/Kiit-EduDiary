@@ -1,9 +1,10 @@
+
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import {ImCross} from 'react-icons/im'
 import { useContext, useState } from 'react'
 import { UserContext } from '../context/UserContext'
-import { URL } from '../pages/url'
+import { URL } from '../url'
 import axios from 'axios'
 import { Navigate, useNavigate } from 'react-router-dom'
 
@@ -70,7 +71,7 @@ const CreatePost = () => {
         }
     }
 
-    
+
 
   return (
     <div>

@@ -3,7 +3,7 @@ import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import {ImCross} from 'react-icons/im'
 import axios from "axios"
-import { URL } from "../pages/url"
+import { URL } from "../url"
 import { useNavigate, useParams } from "react-router-dom"
 import { UserContext } from "../context/UserContext"
 

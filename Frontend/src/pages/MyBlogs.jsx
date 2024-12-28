@@ -4,8 +4,8 @@ import Navbar from "../components/Navbar"
 import { useContext, useEffect, useState } from "react"
 import { UserContext } from "../context/UserContext"
 import axios from "axios"
-import { URL } from "./url"
-import HomePosts from "../components/HomePost"
+import { URL } from "../url"
+import HomePosts from "../components/HomePosts"
 import Loader from "../components/Loader"
 
 

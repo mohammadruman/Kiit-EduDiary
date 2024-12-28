@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { UserContext } from "../context/UserContext"
 import axios from "axios"
-import { URL } from "../pages/url"
+import { URL } from "../url"
 import { Link, useNavigate } from "react-router-dom"
 
 

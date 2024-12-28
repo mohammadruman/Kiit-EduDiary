@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom"
 import Footer from "../components/Footer"
 import { useState } from "react"
 import axios from 'axios'
-import {URL} from '../pages/url'
+import {URL} from '../url'
 
 
 const Register = () => {
@@ -17,6 +17,7 @@ const Register = () => {
     
     try{
       const res=await axios.post(URL+"/api/auth/register",{username,email,password})
+      console.log(res);
       setUsername(res.data.username)
       setEmail(res.data.email)
       setPassword(res.data.password)

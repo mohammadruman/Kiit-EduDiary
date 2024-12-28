@@ -1,11 +1,11 @@
 import { useNavigate, useParams } from "react-router-dom"
-import Comments from "../components/Comments"
+import Comment from "../components/Comment"
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import {BiEdit} from 'react-icons/bi'
 import {MdDelete} from 'react-icons/md'
 import axios from "axios"
-import { URL,IF } from "../pages/url"
+import { URL,IF } from "../url"
 import { useContext, useEffect, useState } from "react"
 import { UserContext } from "../context/UserContext"
 import Loader from "../components/Loader"

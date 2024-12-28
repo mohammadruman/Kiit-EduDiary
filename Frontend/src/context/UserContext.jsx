@@ -3,7 +3,7 @@
 
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
-import { URL } from "../pages/url";
+import { URL } from "../url";
 
 
 export const UserContext=createContext({})
