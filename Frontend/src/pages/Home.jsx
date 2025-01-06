@@ -7,6 +7,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Loader from "../components/Loader";
 import { UserContext } from "../context/UserContext";
+import DarkModeToggle from "../components/DarkModeToggle";  // Import the Dark Mode Toggle component
 
 const Home = () => {
   const { search } = useLocation();
@@ -35,7 +36,8 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="px-4 md:px-16 lg:px-32 min-h-[80vh] flex flex-col items-center">
+      <DarkModeToggle /> {/* Add the Dark Mode Toggle */}
+      <div className="px-4 md:px-16 lg:px-32 min-h-[80vh] flex flex-col items-center bg-white dark:bg-gray-800 dark:text-white">
         {loader ? (
           <div className="h-[40vh] flex justify-center items-center">
             <Loader />

@@ -6,6 +6,7 @@ import { UserContext } from '../context/UserContext';
 import { URL } from '../url';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import DarkModeToggle from '../components/DarkModeToggle';
 
 const CreatePost = () => {
   const [title, setTitle] = useState('');
@@ -73,6 +74,7 @@ const CreatePost = () => {
   return (
     <div>
       <Navbar />
+      <DarkModeToggle/>
       <div className="px-6 md:px-[200px] mt-8">
         <h1 className="font-bold md:text-2xl text-xl">Create a post</h1>
         <form className="w-full flex flex-col space-y-4 md:space-y-8 mt-4">
