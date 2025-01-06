@@ -37,7 +37,7 @@ const Home = () => {
     <>
       <Navbar />
       <DarkModeToggle /> {/* Add the Dark Mode Toggle */}
-      <div className="px-4 md:px-16 lg:px-32 min-h-[80vh] flex flex-col items-center bg-white dark:bg-gray-800 dark:text-white">
+      <div className="px-4 py-3 md:px-16 lg:px-32 min-h-screen flex flex-col items-center bg-white dark:bg-gray-900 dark:text-white">
         {loader ? (
           <div className="h-[40vh] flex justify-center items-center">
             <Loader />
