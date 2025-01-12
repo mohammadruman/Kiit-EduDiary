@@ -37,7 +37,7 @@ const Home = () => {
   }, [search]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-black text-gray-900 dark:text-white">
+    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-[#191919] text-gray-900 dark:text-white">
       <Navbar />
       <DarkModeToggle />
       <div className="px-4 py-3 md:px-16 lg:px-32 flex-grow flex flex-col items-center">
@@ -52,7 +52,7 @@ const Home = () => {
               to={user ? `/posts/post/${post._id}` : "/login"}
               className="w-full md:w-3/4 lg:w-2/3 mb-6 hover:transform hover:scale-[1.02] transition-transform"
             >
-              <div className="bg-white dark:bg-black rounded-lg shadow-md hover:shadow-lg transition-all p-6 dark:border dark:border-gray-800 text-gray-900 dark:text-white">
+              <div className="bg-white dark:bg-[#191919] rounded-lg shadow-md hover:shadow-lg transition-all p-6 dark:border dark:border-gray-800 text-gray-900 dark:text-white">
                 <HomePosts post={post} />
               </div>
             </Link>
