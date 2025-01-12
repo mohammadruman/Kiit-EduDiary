@@ -14,7 +14,7 @@ const Footer = () => {
               GitHub
             </a>
             <a 
-              href="https://your-portfolio-url.com" // Replace with your portfolio URL
+              href="https://your-portfolio-url.com" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
