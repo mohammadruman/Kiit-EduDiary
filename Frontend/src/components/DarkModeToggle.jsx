@@ -31,13 +31,13 @@ const DarkModeToggle = () => {
   return (
     <button
       onClick={toggleDarkMode}
-      className="absolute top-4 right-4 p-2 bg-gray-200 dark:bg-black-400 rounded-full shadow-lg"
+      className="absolute top-4 right-4 p-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-full shadow-lg transition-colors duration-200"
       title="Toggle Dark Mode"
     >
       {isDarkMode ? (
-        <FaSun className="w-6 h-6 text-yellow-500" />  // Sun icon for dark mode
+        <FaSun className="w-6 h-6 text-yellow-400 hover:text-yellow-500" />
       ) : (
-        <FaMoon className="w-6 h-6 text-blue-500" />  // Moon icon for light mode
+        <FaMoon className="w-6 h-6 text-gray-600 hover:text-gray-700" />
       )}
     </button>
   );

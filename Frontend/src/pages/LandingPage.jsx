@@ -1,11 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import LandingNavbar from '../components/LandingNavbar'
+import DarkModeToggle from "../components/DarkModeToggle";
 
 const LandingPage = () => {
   return (
     <div className="min-h-screen flex flex-col justify-between">
+      <LandingNavbar/>
       <main className="flex-1 flex flex-col items-center justify-center text-center px-4">
-        <h1 className="text-4xl font-bold mb-4">Welcome to BlogVerse</h1>
+        <h1 className="text-4xl font-bold mb-4">Welcome to EduDairy</h1>
         <p className="text-lg mb-8 max-w-2xl">
           Discover amazing stories, share your thoughts, and connect with writers from around the world. 
           Your journey into the world of blogging starts here.
@@ -19,9 +22,10 @@ const LandingPage = () => {
       </main>
 
       <footer className="bg-gray-100 py-4 text-center">
-        <p className="text-gray-600">© 2024 BlogVerse. All rights reserved.</p>
+        <p className="text-gray-600">Made with ❤️ by <a href="https://github.com/mohammadruman" target="_blank" rel="noopener noreferrer">Mohammad Ruman</a></p>
       </footer>
     </div>
+    
   )
 }
 
