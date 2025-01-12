@@ -9,6 +9,7 @@ import EditPost from './pages/EditPost'
 import Profile from './pages/Profile'
 import {  UserContextProvider } from './context/UserContext'
 import MyBlogs from './pages/MyBlogs'
+import LandingPage from './pages/LandingPage'
 
 
 
@@ -19,7 +20,8 @@ const App = () => {
   return (
       <UserContextProvider>
       <Routes>
-      <Route exact path="/" element={<Home/>}/>
+      <Route exact path="/" element={<LandingPage/>}/>
+      <Route exact path="/home" element={<Home/>}/>
       <Route exact path="/login" element={<Login/>}/>
       <Route exact path="/register" element={<Register/>}/>
       <Route exact path="/write" element={<CreatePost/>}/>
