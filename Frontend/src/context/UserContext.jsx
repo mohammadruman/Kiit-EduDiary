@@ -19,7 +19,7 @@ export function UserContextProvider({children}){
 
       const getUser = async () => {
       try {
-        const res = await axios.get(`${URL}/api/auth/refetch`, {
+        const res = await axios.get("https://kiit-edu-diary-api.vercel.app/api/auth/refetch", {
           withCredentials: true,
           headers: {
             'Content-Type': 'application/json'
