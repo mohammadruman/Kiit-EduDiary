@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar"
 import {BiEdit} from 'react-icons/bi'
 import {MdDelete} from 'react-icons/md'
 import axios from "axios"
-import { URL,IF } from "../url"
+import { IF } from "../url"
 import { useContext, useEffect, useState } from "react"
 import { UserContext } from "../context/UserContext"
 import Loader from "../components/Loader"
@@ -37,7 +37,10 @@ const PostDetails = () => {
   const handleDeletePost=async ()=>{
 
     try{
-      const res=await axios.delete(URL+"/api/posts/"+postId,{withCredentials:true})
+      const res = await axios.delete(
+  `https://kiit-edu-diary-api.vercel.app/api/posts/${postId}`,
+  { withCredentials: true }
+);
       console.log(res.data)
       navigate("/")
 
