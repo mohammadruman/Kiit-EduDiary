@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom"
 import Footer from "../components/Footer"
 import { useState } from "react"
 import axios from 'axios'
-import {URL} from '../url'
+
 
 
 const Register = () => {
@@ -16,7 +16,10 @@ const Register = () => {
   const handleRegister=async ()=>{
     
     try{
-      const res=await axios.post(URL+"/api/auth/register",{username,email,password})
+   const res = await axios.post(
+  "https://kiit-edu-diary-api.vercel.app/api/auth/register",
+  { username, email, password }
+);
       console.log(res);
       setUsername(res.data.username)
       setEmail(res.data.email)
