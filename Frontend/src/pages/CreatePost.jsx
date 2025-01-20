@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 import { ImCross } from 'react-icons/im';
 import { useContext, useState } from 'react';
 import { UserContext } from '../context/UserContext';
-import { URL } from '../url';
+
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import DarkModeToggle from '../components/DarkModeToggle';
@@ -55,14 +55,18 @@ const CreatePost = () => {
       post.photo = filename;
 
       try {
-        await axios.post(URL + '/api/upload', data);
+       await axios.post(
+  "https://kiit-edu-diary-api.vercel.app/api/upload", 
+  data
+);
+
       } catch (err) {
         console.log(err);
       }
     }
 
     try {
-      const res = await axios.post(URL + '/api/posts/create', post, {
+      const res = await axios.post("https://kiit-edu-diary-api.vercel.app/api/posts/create",post,{
         withCredentials: true,
       });
       navigate('/posts/post/' + res.data._id);
